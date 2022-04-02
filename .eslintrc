@@ -1,0 +1,31 @@
+{
+  "extends": ["next", "next/core-web-vitals"],
+  "plugins": [
+    "eslint-plugin-import-helpers",
+    "@typescript-eslint/eslint-plugin"
+  ],
+  "rules": {
+    "no-unused-vars": "off",
+    "no-console": "error",
+    "no-debugger": "error",
+    "import/no-cycle": "error",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "never",
+        "groups": [
+          "module",
+          "/^styles/",
+          "/^api/",
+          "/^utils/",
+          "/^helpers/",
+          "/^contexts/",
+          "/^hooks/",
+          "/^components/",
+          ["parent", "sibling", "index"]
+        ]
+      }
+    ]
+  }
+}

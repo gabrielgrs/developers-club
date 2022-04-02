@@ -1,6 +1,6 @@
+import { Fragment } from 'react'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Fragment } from 'react'
 import Head from 'next/head'
 
 function MyApp({ Component, pageProps }: AppProps) {
