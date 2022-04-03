@@ -1,6 +1,8 @@
 import styled, { keyframes } from 'styled-components'
 
-export const Wrapper = styled.div``
+export const Wrapper = styled.div`
+  height: min-content;
+`
 
 const childrenAppearsAnimation = keyframes`
   from {

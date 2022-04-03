@@ -10,7 +10,6 @@ export const About = styled.div`
 export const Card = styled.div`
   text-align: center;
   width: 80%;
-  height: 100px;
   display: flex;
   justify-content: center;
 `
