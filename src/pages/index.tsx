@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
+import LandingPageTemplate from '../templates/LandingPage'
 
 const Home: NextPage = () => {
-  return <div>Hello World</div>
+  return <LandingPageTemplate />
 }
 
 export default Home
