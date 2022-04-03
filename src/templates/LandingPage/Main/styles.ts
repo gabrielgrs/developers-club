@@ -9,6 +9,12 @@ export const Main = styled.main`
   align-items: center;
   padding: 0 10%;
   position: relative;
+
+  ${({ theme }) => theme.breakPoints.mobile} {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
 `
 
 export const Description = styled.div`

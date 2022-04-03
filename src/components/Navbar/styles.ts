@@ -33,16 +33,28 @@ export const Nav = styled.nav<{ isFloating: boolean }>`
   left: 0;
 
   ${({ isFloating }) => isFloating && modifiers.isFloating()};
+
+  ${({ theme }) => theme.breakPoints.mobile} {
+    flex-direction: column;
+    height: max-content;
+  }
 `
 
 export const Section = styled.div`
   display: flex;
+  align-items: center;
   gap: 16px;
+  width: 100%;
+
+  ${({ theme }) => theme.breakPoints.mobile} {
+    flex-direction: column;
+  }
 `
 
-export const Item = styled.a`
+export const Item = styled.a<{ isOpen: boolean }>`
   color: ${({ theme }) => theme.colors.silver};
   transition: 0.4s;
+  text-align: center;
 
   &:after {
     transition: 0.4s;
@@ -62,10 +74,36 @@ export const Item = styled.a`
       opacity: 1;
     }
   }
+
+  ${({ theme }) => theme.breakPoints.mobile} {
+    display: ${({ isOpen }) => (isOpen ? 'initial' : 'none')};
+    padding: 8px 0;
+  }
+`
+
+export const LogoAndCollapse = styled.div`
+  width: 100%;
+
+  ${({ theme }) => theme.breakPoints.mobile} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+  }
 `
 
 export const Logo = styled.a`
   font-size: 1.5em;
   font-weight: 600;
   color: ${({ theme }) => theme.colors.primary};
+`
+
+export const Collapse = styled.button`
+  background: none;
+  border: none;
+  display: none;
+
+  ${({ theme }) => theme.breakPoints.mobile} {
+    display: initial;
+  }
 `

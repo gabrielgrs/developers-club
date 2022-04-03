@@ -9,6 +9,11 @@ export const Team = styled.div`
   justify-content: flex-start;
   padding-left: 3%;
   gap: 32px;
+
+  ${({ theme }) => theme.breakPoints.mobile} {
+    flex-direction: column;
+    padding: 20%;
+  }
 `
 
 export const About = styled.div`

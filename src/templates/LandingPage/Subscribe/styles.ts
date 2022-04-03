@@ -13,6 +13,10 @@ export const Card = styled.div`
   height: 200px;
   align-items: center;
   color: ${({ theme }) => theme.colors.white};
+
+  ${({ theme }) => theme.breakPoints.mobile} {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const Input = styled.input`

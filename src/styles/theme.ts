@@ -10,8 +10,14 @@ const colors = {
   silver: 'silver',
 }
 
+const breakPoints = {
+  mobile: `@media screen and (max-width:  768px)`,
+  desktop: `@media screen and (min-width: 769px)`,
+}
+
 const theme = {
   colors,
+  breakPoints,
 }
 
 export default theme
